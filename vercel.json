@@ -1,20 +1,9 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "src": "/real-estate", "dest": "/real-estate.html" },
-    { "src": "/startups", "dest": "/startups.html" },
-    { "src": "/connect", "dest": "/connect.html" }
+  "rewrites": [
+    { "source": "/real-estate", "destination": "/real-estate.html" },
+    { "source": "/startups", "destination": "/startups.html" },
+    { "source": "/connect", "destination": "/connect.html" }
   ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": false
 } 
