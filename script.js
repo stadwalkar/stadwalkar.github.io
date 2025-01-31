@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     menuToggle.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        navLinks.classList.toggle('show');
     });
 
-    // Close menu when clicking outside - but only on mobile
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {  // Only on mobile
+        if (window.innerWidth <= 768) {
             if (!e.target.closest('nav') && !e.target.closest('.menu-toggle')) {
-                navLinks.style.display = 'none';
+                navLinks.classList.remove('show');
             }
         }
     });

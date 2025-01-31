@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -30,25 +30,26 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .logo-image {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
     color: #1a1a1a;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: color 0.2s;
 }
 
@@ -71,9 +72,9 @@ main {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     line-height: 1.2;
     white-space: nowrap;
 }
@@ -93,9 +94,10 @@ h1 {
     display: inline-block;
     background-color: #E8F2FF;
     color: #007AFF;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 6px;
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
 h2 {
@@ -138,7 +140,6 @@ h2 {
     h1 {
         font-size: 2rem;
         white-space: normal;
-        margin-bottom: 1rem;
     }
 
     h2 {
@@ -168,6 +169,7 @@ h2 {
     }
 
     .nav-links {
+        display: none;  /* Hidden by default */
         position: fixed;
         top: 70px;
         left: 0;
@@ -178,8 +180,11 @@ h2 {
         align-items: center;
         gap: 1rem;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        display: none;
         z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex;  /* Show when .show class is added */
     }
 
     /* About page optimizations */
@@ -282,7 +287,7 @@ h2 {
 
 .real-estate-content {
     padding: 2rem 0;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -466,8 +471,9 @@ h2 {
 .footer {
     background-color: #f8f9fa;
     padding: 4rem 0;
-    margin-top: 2rem;
+    margin-top: 0;
     text-align: center;
+    position: relative;
 }
 
 .footer-content {
@@ -560,10 +566,13 @@ h2 {
 }
 
 .scroll-arrow {
-    margin-top: 1rem;
+    margin-top: -3rem;
+    margin-bottom: 0;
     text-align: center;
     color: #007AFF;
     animation: bounce 2s infinite;
+    position: relative;
+    z-index: 1;
 }
 
 .scroll-arrow i {
@@ -635,17 +644,17 @@ h2 {
 }
 
 .about-content {
-    padding: 4rem 0;
-    max-width: 800px;
+    padding: 3rem 0;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .about-intro {
-    font-size: 1.1rem;
-    color: #666;
-    margin: 1.5rem 0;
-    max-width: 600px;
+    font-size: 1rem;
+    margin: 1rem 0;
+    max-width: 500px;
     line-height: 1.6;
+    margin-top: 1rem;
 }
 
 .license-info {
@@ -719,15 +728,15 @@ h2,
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .about-image {
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     margin-left: auto;
 }
 
@@ -756,11 +765,31 @@ h2,
     font-size: 1.5rem;
     cursor: pointer;
     color: #1a1a1a;
+    padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+    }
+
+    .nav-links {
+        display: none;  /* Hidden by default */
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex;  /* Show when .show class is added */
     }
 }
 
@@ -781,13 +810,13 @@ h2,
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .real-estate-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     margin-left: auto;
 }
 
@@ -796,12 +825,12 @@ h2,
     height: auto;
     border-radius: 12px;
     object-fit: cover;
-    max-height: 600px;
+    max-height: 500px;
 }
 
 /* Adjust text container */
 .real-estate-text {
-    max-width: 500px;
+    max-width: 450px;
 }
 
 @media (max-width: 768px) {
@@ -826,10 +855,39 @@ h2,
 
 /* Reduce space between social links and footer */
 .connect-section:last-child {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
-/* Reduce space between social links and footer */
+/* Specific positioning for connect page scroll arrow */
+.scroll-arrow.connect-scroll {
+    margin-top: -3rem;  /* Back to original */
+    margin-bottom: 0;  /* Back to original */
+}
+
+/* Adjust connect section spacing */
+.connect-section:last-child {
+    margin-bottom: 3rem;  /* Back to original */
+}
+
+/* Adjust footer spacing */
 .footer {
-    margin-top: 2rem;
+    margin-top: 1rem;  /* Add a bit of space */
+}
+
+/* Specific positioning for startups page scroll arrow */
+.scroll-arrow.startups-scroll {
+    margin-top: 1rem;
+    margin-bottom: -2rem;  /* Increased negative margin to move it closer to footer */
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove footer margin for startups page */
+.startups-content + .scroll-arrow + .footer {
+    margin-top: 0;  /* Removed margin to bring footer closer */
+}
+
+/* Remove the default negative margin for startups page */
+.investment-cta {
+    margin-bottom: 0;  /* Reset margin */
 } 
