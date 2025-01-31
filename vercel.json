@@ -1,6 +1,11 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "routes": [
+    { "src": "/real-estate", "dest": "/real-estate.html" },
+    { "src": "/startups", "dest": "/startups.html" },
+    { "src": "/connect", "dest": "/connect.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
