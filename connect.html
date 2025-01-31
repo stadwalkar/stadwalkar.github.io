@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/Sahil Tadwalkar Logo Emblem.png" alt="Sahil Tadwalkar" class="logo-image">
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">About</a></li>
+                <li><a href="/real-estate.html">Real Estate</a></li>
+                <li><a href="/startups.html">Startups</a></li>
+                <li><a href="/connect.html" class="active">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="connect-content">
+            <h1>Let's Connect</h1>
+            
+            <div class="connect-section">
+                <h2>Meet in Person</h2>
+                <a href="https://www.meetup.com/southbay-re-investors/" class="connect-link meetup">
+                    Join our Meetup Group 📍 South Bay
+                </a>
+                <!--<p>Join our South Bay Real Estate Investor Club! Whether you're just starting or looking to scale your investments, come connect with fellow investors.</p>-->
+            </div>
+
+            <div class="connect-section">
+                <h2>Social Links</h2>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/sahil-tadwalkar/" class="connect-link linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://x.com/stadwalk" class="connect-link twitter">
+                        <i class="fab fa-x-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://github.com/stadwalkar" class="connect-link github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Get in Touch</h2>
+            <p>Think I can help with your real estate needs or startup? Let's find out.</p>
+            <form class="contact-form" action="https://formspree.io/f/meoekovr" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Tell me about your startup or investment opportunity" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <i class="far fa-paper-plane"></i>
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html> 
