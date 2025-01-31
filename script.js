@@ -35,13 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Load footer component
-    fetch('/components/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.body.insertAdjacentHTML('beforeend', data);
-        });
-
     // Header scroll behavior
     let lastScroll = 0;
     const header = document.querySelector('header');

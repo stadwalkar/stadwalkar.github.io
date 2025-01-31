@@ -14,16 +14,16 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="/assets/Sahil Tadwalkar Logo Emblem.png" alt="Sahil Tadwalkar" class="logo-image">
+                <img src="assets/Sahil Tadwalkar Logo Emblem.png" alt="Sahil Tadwalkar" class="logo-image">
             </div>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
                 <li><a href="/" class="active">About</a></li>
-                <li><a href="/real-estate.html">Real Estate</a></li>
-                <li><a href="/startups.html">Startups</a></li>
-                <li><a href="/connect.html">Connect</a></li>
+                <li><a href="/real-estate">Real Estate</a></li>
+                <li><a href="/startups">Startups</a></li>
+                <li><a href="/connect">Connect</a></li>
             </ul>
         </nav>
     </header>
@@ -39,11 +39,32 @@
                     <p class="availability">Located in the San Francisco Bay Area</p>
                 </div>
                 <div class="about-image">
-                    <img src="/assets/profile.jpg" alt="Sahil Tadwalkar">
+                    <img src="assets/profile.jpg" alt="Sahil Tadwalkar">
                 </div>
             </div>
         </section>
     </main>
-    <div id="footer-placeholder"></div>
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Get in Touch</h2>
+            <p>Think I can help with your real estate needs or startup?<br>
+                Let's find out!</p>
+            <form class="contact-form" action="https://formspree.io/f/meoekovr" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Tell me about what you need." required></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <i class="far fa-paper-plane"></i>
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </footer>
 </body>
 </html>

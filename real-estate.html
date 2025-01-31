@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="/">
-                    <img src="/assets/Sahil Tadwalkar Logo Emblem.png" alt="Sahil Tadwalkar" class="logo-image">
+                <a href="index.html">
+                    <img src="assets/Sahil Tadwalkar Logo Emblem.png" alt="Sahil Tadwalkar" class="logo-image">
                 </a>
             </div>
             <button class="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
-                <li><a href="/">About</a></li>
-                <li><a href="/real-estate.html" class="active">Real Estate</a></li>
-                <li><a href="/startups.html">Startups</a></li>
-                <li><a href="/connect.html">Connect</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="real-estate.html" class="active">Real Estate</a></li>
+                <li><a href="startups.html">Startups</a></li>
+                <li><a href="connect.html">Connect</a></li>
             </ul>
         </nav>
     </header>
@@ -45,11 +45,32 @@
                     </div>
                 </div>
                 <div class="real-estate-image">
-                    <img src="/assets/pexels-jessica-bryant-592135-1370704.jpg" alt="Real Estate Property">
+                    <img src="assets/pexels-jessica-bryant-592135-1370704.jpg" alt="Real Estate Property">
                 </div>
             </div>
         </section>
     </main>
-    <div id="footer-placeholder"></div>
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Get in Touch</h2>
+            <p>Think I can help with your real estate needs or startup?<br>
+                Let's find out!</p>
+            <form class="contact-form" action="https://formspree.io/f/meoekovr" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Tell me about what you need." required></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <i class="far fa-paper-plane"></i>
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </footer>
 </body>
 </html> 
