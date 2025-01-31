@@ -40,21 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     
     window.addEventListener('scroll', () => {
-        if (window.innerWidth <= 768) {  // Only apply on mobile
+        if (window.innerWidth <= 768) {
             const currentScroll = window.pageYOffset;
             
             if (currentScroll > lastScroll && currentScroll > 100) {
-                // Scrolling down & past the header
                 header.classList.add('hide');
             } else {
-                // Scrolling up
                 header.classList.remove('hide');
             }
             
             lastScroll = currentScroll;
-        } else {
-            // On desktop, always show header
-            header.classList.remove('hide');
         }
     });
 }); 
