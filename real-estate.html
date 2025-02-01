@@ -52,22 +52,70 @@
     </main>
     <footer class="footer">
         <div class="footer-content">
-            <h2>Get in Touch</h2>
-            <p>Think I can help with your real estate needs or startup?<br>
-                Let's find out!</p>
-            <form class="contact-form" action="https://formspree.io/f/meoekovr" method="POST">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
+            <h2>Real Estate Investment Interest Form</h2>
+            <p>Please fill out this form if you're interested in <br>
+                investing alongside me.</p>
+            <form class="contact-form investment-form" action="https://formspree.io/f/meoekovr" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lastName" placeholder="Last Name" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
                 </div>
+                
                 <div class="form-group">
-                    <textarea name="message" placeholder="Tell me about what you need." required></textarea>
+                    <label>How much are you looking to invest?</label>
+                    <select name="investmentAmount" required>
+                        <option value="">Select an amount</option>
+                        <option value="25-50k">$25,000 to $50,000</option>
+                        <option value="50-100k">$50,000 to $100,000</option>
+                        <option value="100-150k">$100,000 to $150,000</option>
+                        <option value="150k+">$150,000 or more</option>
+                    </select>
                 </div>
+
+                <div class="form-group">
+                    <label>When are you looking to invest?</label>
+                    <select name="investmentTimeline" required>
+                        <option value="">Select a timeline</option>
+                        <option value="now">Now</option>
+                        <option value="3months">In 3 months</option>
+                        <option value="6months">In 6 months</option>
+                        <option value="12months">In 12 months</option>
+                        <option value="12months+">More than a year from now</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Are you an Accredited Investor?</label>
+                    <p class="form-help-text">
+                        An accredited investor has an annual income exceeding $200,000 or joint income with a spouse exceeding $300,000 in each of the two most recent years OR has an individual net worth, or joint net worth with the person's spouse, that exceeds $1 million, excluding the value of their primary residence.
+                    </p>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="accredited" value="yes" required>
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="accredited" value="no" required>
+                            No
+                        </label>
+                    </div>
+                </div>
+
                 <button type="submit" class="submit-button">
                     <i class="far fa-paper-plane"></i>
-                    Send Message
+                    Submit Interest
                 </button>
             </form>
         </div>

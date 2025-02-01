@@ -923,4 +923,116 @@ h2,
 /* Remove the default negative margin for startups page */
 .investment-cta {
     margin-bottom: 0;  /* Reset margin */
+}
+
+/* Investment form specific styles */
+.investment-form .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.investment-form .form-group {
+    flex: 1;
+}
+
+.investment-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.investment-form select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: white;
+    cursor: pointer;
+}
+
+.investment-form .form-help-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.investment-form .radio-group {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    justify-content: center;  /* Center the radio buttons */
+}
+
+.investment-form .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    min-width: 80px;  /* Give each label a minimum width */
+    justify-content: center;  /* Center the content within each label */
+}
+
+.investment-form input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .investment-form .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .investment-form .radio-group {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;  /* Center radio buttons on mobile */
+    }
+    
+    .investment-form .radio-label {
+        width: 100%;
+        max-width: 200px;  /* Limit width on mobile */
+        justify-content: center;  /* Center content on mobile */
+    }
+}
+
+/* Startup form specific styles */
+.startup-form .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.startup-form .form-group {
+    flex: 1;
+}
+
+.startup-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.startup-form select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .startup-form .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
 } 
